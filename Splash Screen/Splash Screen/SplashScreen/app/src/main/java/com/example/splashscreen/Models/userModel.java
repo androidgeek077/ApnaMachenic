@@ -1,7 +1,39 @@
 package com.example.splashscreen.Models;
 
 public class userModel {
-    String name, contact, imageurl, mailaddress, mechanictype, experienceyears, userlat, userlong;
+    String userid;
+
+
+    String name;
+    String contact;
+    String imageurl;
+    String mailaddress;
+    String mechanictype;
+    String experienceyears;
+    String userlat;
+    String userlong;
+    String usertype;
+
+    public String getUsertype() {
+        return usertype;
+    }
+
+    public void setUsertype(String usertype) {
+        this.usertype = usertype;
+    }
+
+    public userModel(String userid, String name, String contact, String imageurl, String mailaddress, String mechanictype, String experienceyears, String userlat, String userlong, String usertype) {
+        this.userid = userid;
+        this.name = name;
+        this.contact = contact;
+        this.imageurl = imageurl;
+        this.mailaddress = mailaddress;
+        this.mechanictype = mechanictype;
+        this.experienceyears = experienceyears;
+        this.userlat = userlat;
+        this.userlong = userlong;
+        this.usertype = usertype;
+    }
 
     public String getName() {
         return name;
@@ -67,14 +99,14 @@ public class userModel {
         this.userlong = userlong;
     }
 
-    public userModel(String name, String contact, String imageurl, String mailaddress, String mechanictype, String experienceyears, String userlat, String userlong) {
-        this.name = name;
-        this.contact = contact;
-        this.imageurl = imageurl;
-        this.mailaddress = mailaddress;
-        this.mechanictype = mechanictype;
-        this.experienceyears = experienceyears;
-        this.userlat = userlat;
-        this.userlong = userlong;
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public userModel() {
     }
 }
