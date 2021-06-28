@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "367657656561",
+    "project_id": "apna-mechanic-cd1cf",
+    "storage_bucket": "apna-mechanic-cd1cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367657656561:android:69ec41ac6b3ea1170b8950",
+        "android_client_info": {
+          "package_name": "com.example.splashscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367657656561-9nnqk3e6mifet4b1v4pm44d6o5cmrpe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgo9FpJen7qMokhlnjmJWiuNOg9kiIFtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367657656561-9nnqk3e6mifet4b1v4pm44d6o5cmrpe4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
