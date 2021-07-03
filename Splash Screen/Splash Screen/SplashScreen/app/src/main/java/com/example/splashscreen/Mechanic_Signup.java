@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +42,7 @@ public class Mechanic_Signup extends AppCompatActivity {
     TextView goTologin;
     RadioGroup mGenderradioGrp;
     RadioButton MaleRB, FemaleRB;
-    TextInputEditText emailET, nameET, phoneET, PasswordET, CNICET, expertise;
+    TextInputEditText emailET, nameET, phoneET, PasswordET, expertise;
     String emailStr, nameStr, phoneStr, passwordStr, cnicStr, ExperienceStr;
     Button btnsignup;
     ProgressBar mProgressBar;
@@ -59,6 +60,7 @@ public class Mechanic_Signup extends AppCompatActivity {
     private StorageReference mProfilePicStorageReference;
     StorageReference profilePicRef;
     private String downloadUri;
+    private Spinner mechanicTypeSpnr;
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -72,6 +74,7 @@ public class Mechanic_Signup extends AppCompatActivity {
         myRef = FirebaseDatabase.getInstance().getReference("Users");
         mProfilePicStorageReference = FirebaseStorage.getInstance().getReference();
 
+        mechanicTypeSpnr = findViewById(R.id.mechanicTypeSpnr);
         mProfilePic = findViewById(R.id.selectedImg);
         mSelectImgBtn = findViewById(R.id.btn_selectimg);
         mSelectImgBtn.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +113,7 @@ public class Mechanic_Signup extends AppCompatActivity {
                                             public void onSuccess(Uri uri) {
                                                 downloadUri = uri.toString();
                                                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                                                userModel user = new userModel(uid, nameStr,phoneStr,downloadUri,  emailStr,"Car",ExperienceStr, "","", "admin");
+                                                userModel user = new userModel(uid, nameStr,phoneStr,downloadUri,  emailStr,mechanicTypeSpnr.getSelectedItem().toString(),ExperienceStr, "32.078665","72.68051999999999", "mechnanic");
                                                 myRef.child(uid).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
                                                     public void onSuccess(Void aVoid) {
@@ -183,7 +186,6 @@ public class Mechanic_Signup extends AppCompatActivity {
         nameStr = nameET.getText().toString();
         phoneStr = phoneET.getText().toString();
         passwordStr = PasswordET.getText().toString();
-        cnicStr = CNICET.getText().toString();
         ExperienceStr = expertise.getText().toString();
     }
 

@@ -1,0 +1,140 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F1EE"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/userNameTV"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="Muhammad Ali"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/userprofileIV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:gravity="start"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/userAddressTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".6"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Jalap, kotmomin, sgd"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userCnicTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".4"
+                android:drawableLeft="@drawable/ic_id"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start"
+                android:text="3840604428153"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/userEmailTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".6"
+                android:drawableLeft="@drawable/ic_mail"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="test@gmail.com"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mobileNoTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".4"
+                android:drawableLeft="@drawable/ic_phone_call"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start"
+                android:text="03004626618"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/EditMacBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit" />
+            <Button
+                android:id="@+id/deleteMacBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
